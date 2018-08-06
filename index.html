@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Independent Pakistan</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway" rel="stylesheet">
+
+    <link rel="icon" href="img/pakistan.png">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="container-rightbar">
+        <div class="nav-contain">
+            <div class="pak" onclick="base()">
+                Pakistan Independence Day
+            </div>
+            <div class="one" onclick="karachi()">
+                Karachi
+            </div>
+            <div class="two" onclick="lahore()">
+                Lahore
+            </div>
+            <div class="three" onclick="islamabad()">
+                Islamabad
+            </div>
+            <div class="all"></div>
+        </div>
+    </div>
+    <div class="container" onmousewheel="wheel(event)">
+        <!-- for pakistan -->
+        <div class="topLeft card" onclick="lahore()">
+            <div class="innerContent">
+                <h2>Lahore</h2>
+                <div class="minar"></div>
+            </div>
+        </div>
+        <div class="bottomLeft card" onclick="karachi()">
+            <div class="innerContent">
+                <h2>Karachi</h2>
+                <div class="tomb"></div>
+            </div>
+        </div>
+        <div class="bottomRight card" onclick="islamabad()">
+            <div class="innerContent">
+                <h2>Islamabad</h2>
+                <div class="faisal"></div>
+            </div>
+        </div>
+        <div class="topRight card">
+            <div class="innerContent">
+                <h2>Landscapes</h2>
+                <div class="sun"></div>
+            </div>
+        </div>
+
+        <!-- for Karachi -->
+        <h1 class="karachi">Karachi, PK</h1>
+        
+        <!-- for Lahore -->
+        <h1 class="lahori">Lahore, PK</h1>
+        
+        <!-- for Islamabad -->
+        <h1 class="abad">Islamabad, PK</h1>
+        
+        <div id="description">
+            <h2>Char Minaar Chowrangi</h2>
+            <p>This roundabout in Karachi has featured in a list of the world’s most beautiful roundabouts by a UK based Roundabout Appreciation Society.</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

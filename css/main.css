@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  transition: 0.6s; }
+
+body {
+  background: #222;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  overflow: hidden; }
+  body .container {
+    padding: 0 70px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Pakistan.jpg) no-repeat right;
+    background-size: 100% 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16), 1px 0 5px rgba(0, 0, 0, 0.18); }
+  body .container .topLeft {
+    position: absolute;
+    text-align: center;
+    animation: 8s infinite alternate;
+    top: 0vh;
+    left: 11vw;
+    background: url(../img/1.png) no-repeat;
+    background-size: contain;
+    opacity: 0.9;
+    cursor: pointer;
+    height: 64vh;
+    width: 20vw;
+    transform: scale(0.9); }
+    body .container .topLeft .innerContent {
+      opacity: 0.3;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+    body .container .topLeft:hover {
+      z-index: 150; }
+      body .container .topLeft:hover .innerContent {
+        opacity: 1;
+        text-shadow: 1px 1px 10px white; }
+    body .container .topLeft div.minar {
+      background: url(../img/minar.png) no-repeat center;
+      width: 100%;
+      height: 50vh;
+      background-size: contain; }
+  body .container .topRight {
+    position: absolute;
+    text-align: center;
+    animation: 8s infinite alternate;
+    top: 6vh;
+    left: 62vw;
+    background: url(../img/2.png) no-repeat;
+    background-size: contain;
+    opacity: 0.9;
+    cursor: pointer;
+    height: 64vh;
+    width: 20vw;
+    transform: scale(0.9); }
+    body .container .topRight .innerContent {
+      opacity: 0.3;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+    body .container .topRight:hover {
+      z-index: 150; }
+      body .container .topRight:hover .innerContent {
+        opacity: 1;
+        text-shadow: 1px 1px 10px white; }
+    body .container .topRight div.sun {
+      background: url(../img/sun.png) no-repeat center;
+      width: 100%;
+      height: 30vh;
+      background-size: contain; }
+  body .container .bottomLeft {
+    position: absolute;
+    text-align: center;
+    animation: 8s infinite alternate;
+    top: 36vh;
+    left: 50vw;
+    background: url(../img/3.png) no-repeat;
+    background-size: contain;
+    opacity: 0.9;
+    cursor: pointer;
+    height: 64vh;
+    width: 20vw;
+    transform: scale(0.9);
+    height: 66vh;
+    z-index: 10; }
+    body .container .bottomLeft .innerContent {
+      opacity: 0.3;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+    body .container .bottomLeft:hover {
+      z-index: 150; }
+      body .container .bottomLeft:hover .innerContent {
+        opacity: 1;
+        text-shadow: 1px 1px 10px white; }
+    body .container .bottomLeft div.tomb {
+      background: url(../img/tomb.png) no-repeat center;
+      width: 100%;
+      height: 30vh;
+      background-size: contain; }
+  body .container .bottomRight {
+    position: absolute;
+    animation: 8s infinite alternate;
+    top: 51vh;
+    text-align: center;
+    left: 19.5vw;
+    background: url(../img/4.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    width: 64vh;
+    height: 20vw;
+    transform: scale(0.9); }
+    body .container .bottomRight .innerContent {
+      opacity: 0.3; }
+      body .container .bottomRight .innerContent div.faisal {
+        background: url(../img/faisal.png) no-repeat center;
+        width: 100%;
+        height: 30vh;
+        background-size: contain; }
+    body .container .bottomRight:hover {
+      z-index: 150; }
+      body .container .bottomRight:hover .innerContent {
+        opacity: 1;
+        text-shadow: 1px 1px 10px white; }
+  body .container-rightbar {
+    height: 100%;
+    width: 320px;
+    transition-timing-function: ease-out;
+    z-index: 100;
+    position: absolute;
+    right: 0; }
+    body .container-rightbar:hover > .nav-contain {
+      margin-left: 0;
+      background: #000; }
+      body .container-rightbar:hover > .nav-contain .all {
+        display: block; }
+    body .container-rightbar .nav-contain {
+      color: #b1b1b1;
+      position: relative;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      margin-left: 280px;
+      width: 320px;
+      background: rgba(0, 0, 0, 0.4);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      body .container-rightbar .nav-contain .pak {
+        position: relative;
+        background: url(../img/pak.png) no-repeat;
+        background-position-x: 5px;
+        background-position-y: center;
+        background-size: 30px, 30px;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        padding: 10px 30px 10px 45px;
+        margin: 10px 0; }
+        body .container-rightbar .nav-contain .pak:hover::after {
+          content: " ";
+          position: absolute;
+          bottom: -1.5px;
+          right: 25px;
+          height: 1px;
+          width: 75%;
+          transform: scale(0.9);
+          animation: border 0.5s;
+          background-color: #222; }
+      body .container-rightbar .nav-contain .one {
+        position: relative;
+        background: url(../img/one.png) no-repeat;
+        background-position-x: 5px;
+        background-position-y: center;
+        background-size: 30px, 30px;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        padding: 10px 30px 10px 45px;
+        margin: 10px 0; }
+        body .container-rightbar .nav-contain .one:hover::after {
+          content: " ";
+          position: absolute;
+          bottom: -1.5px;
+          right: 25px;
+          height: 1px;
+          width: 75%;
+          transform: scale(0.9);
+          animation: border 0.5s;
+          background-color: #222; }
+      body .container-rightbar .nav-contain .two {
+        position: relative;
+        background: url(../img/two.png) no-repeat;
+        background-position-x: 5px;
+        background-position-y: center;
+        background-size: 30px, 30px;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        padding: 10px 30px 10px 45px;
+        margin: 10px 0; }
+        body .container-rightbar .nav-contain .two:hover::after {
+          content: " ";
+          position: absolute;
+          bottom: -1.5px;
+          right: 25px;
+          height: 1px;
+          width: 75%;
+          transform: scale(0.9);
+          animation: border 0.5s;
+          background-color: #222; }
+      body .container-rightbar .nav-contain .three {
+        position: relative;
+        background: url(../img/three.png) no-repeat;
+        background-position-x: 5px;
+        background-position-y: center;
+        background-size: 30px, 30px;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        padding: 10px 30px 10px 45px;
+        margin: 10px 0; }
+        body .container-rightbar .nav-contain .three:hover::after {
+          content: " ";
+          position: absolute;
+          bottom: -1.5px;
+          right: 25px;
+          height: 1px;
+          width: 75%;
+          transform: scale(0.9);
+          animation: border 0.5s;
+          background-color: #222; }
+      body .container-rightbar .nav-contain .all {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        background: url(../img/all.png) no-repeat center;
+        width: 100%;
+        height: 30vh;
+        background-size: contain; }
+  body .container h1.karachi {
+    text-align: right;
+    display: none;
+    color: #fff;
+    text-shadow: 1px 1px 10px black; }
+  body .container div#description {
+    text-align: left;
+    display: none;
+    text-shadow: 1px 1px 10px black;
+    max-width: 450px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px; }
+    body .container div#description h2 {
+      margin: 0; }
+    body .container div#description p {
+      font-size: 1.1em; }
+    body .container div#description:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
+  body .container .lahori, body .container .abad {
+    text-align: right;
+    display: none;
+    color: #fff;
+    text-shadow: 1px 1px 10px black; }
+
+@keyframes border {
+  0% {
+    transform: scale(0); } }
+@keyframes scaling {
+  0% {
+    transform: scale(0.9);
+    box-shadow: none; }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3), -10px 0 8px rgba(0, 0, 0, 0.3), 0 -10px 8px rgba(0, 0, 0, 0.3), 10px 0 8px rgba(0, 0, 0, 0.3); } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,231 @@
+@mixin sidebarIcon($temp) {
+    .#{$temp} {
+        position: relative;
+        background: url(../img/#{$temp}.png) no-repeat;
+        background-position-x: 5px;
+        background-position-y: center;
+        background-size: 30px, 30px;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        padding: 10px 30px 10px 45px;
+        margin: 10px 0;
+        &:hover::after {
+            content: " ";
+            position: absolute;
+            bottom: -1.5px;
+            right: 25px;
+            height: 1px;
+            width: 75%;
+            transform: scale(0.9);
+            animation: border 0.5s;
+            background-color: #222;
+        }
+    }
+}
+
+@mixin overlayCards($img, $top, $left) {
+    position: absolute;
+    text-align: center;
+    animation: 8s infinite alternate;
+    top: $top;
+    left: $left;
+    background: url(../img/#{$img}.png) no-repeat;
+    background-size: contain;
+    opacity: 0.9;
+    cursor: pointer;
+    height: 64vh;
+    width: 20vw;
+    transform: scale(0.9); // box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3), -10px 0 8px rgba(0, 0, 0, 0.3), 0 -10px 8px rgba(0, 0, 0, 0.3), 10px 0 8px rgba(0, 0, 0, 0.3);
+    .innerContent {
+        opacity: 0.3;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &:hover {
+        z-index: 150;
+        .innerContent {
+            opacity: 1;
+            text-shadow: 1px 1px 10px rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    transition: 0.6s;
+}
+
+body {
+    background: #222;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    .container {
+        & {
+            padding: 0 70px;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            background: url(../img/Pakistan.jpg) no-repeat right;
+            background-size: 100% 100%;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16), 1px 0 5px rgba(0, 0, 0, 0.18);
+        }
+        .topLeft {
+            @include overlayCards(1, 0vh, 11vw);
+            div.minar {
+                background: url(../img/minar.png) no-repeat center;
+                width: 100%;
+                height: 50vh;
+                background-size: contain;
+            }
+        }
+        .topRight {
+            @include overlayCards(2, 6vh, 62vw);
+            div.sun {
+                background: url(../img/sun.png) no-repeat center;
+                width: 100%;
+                height: 30vh;
+                background-size: contain;
+            }
+        }
+        .bottomLeft {
+            @include overlayCards(3, 36vh, 50vw);
+            height: 66vh;
+            z-index: 10;
+            div.tomb {
+                background: url(../img/tomb.png) no-repeat center;
+                width: 100%;
+                height: 30vh;
+                background-size: contain;
+            }
+        }
+        .bottomRight {
+            position: absolute;
+            animation: 8s infinite alternate;
+            top: 51vh;
+            text-align: center;
+            left: 19.5vw;
+            background: url(../img/4.png) no-repeat;
+            background-size: cover;
+            cursor: pointer;
+            width: 64vh;
+            height: 20vw;
+            transform: scale(0.9); // box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3), -10px 0 8px rgba(0, 0, 0, 0.3), 0 -10px 8px rgba(0, 0, 0, 0.3), 10px 0 8px rgba(0, 0, 0, 0.3);
+            .innerContent {
+                opacity: 0.3;
+                div.faisal {
+                    background: url(../img/faisal.png) no-repeat center;
+                    width: 100%;
+                    height: 30vh;
+                    background-size: contain;
+                }
+            }
+            &:hover {
+                z-index: 150;
+                .innerContent {
+                    opacity: 1;
+                    text-shadow: 1px 1px 10px rgba(255, 255, 255, 1);
+                }
+            }
+        }
+        &-rightbar {
+            height: 100%;
+            width: 320px;
+            transition-timing-function: ease-out;
+            z-index: 100;
+            position: absolute;
+            right: 0;
+            &:hover>.nav-contain {
+                margin-left: 0;
+                background: #000;
+                .all{
+                    display: block;
+                }
+            }
+            .nav-contain {
+                color: rgb(177, 177, 177);
+                position: relative;
+                text-align: center;
+                font-family: 'Dancing Script', cursive;
+                font-size: 1.3rem;
+                margin-left: 280px;
+                width: 320px;
+                background: rgba(0, 0, 0, 0.4);
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                @include sidebarIcon(pak);
+                @include sidebarIcon(one);
+                @include sidebarIcon(two);
+                @include sidebarIcon(three);
+                .all {
+                    display: none;
+                    position: absolute;
+                    bottom: 0;
+                    background: url(../img/all.png) no-repeat center;
+                    width: 100%;
+                    height: 30vh;
+                    background-size: contain;
+                }
+            }
+        }
+
+        //karachi
+        h1.karachi{
+            text-align: right;
+            display: none;
+            color: #fff;
+            text-shadow: 1px 1px 10px rgb(0, 0, 0);
+        }
+        div#description{
+            text-align: left;
+            display: none;
+            text-shadow: 1px 1px 10px rgb(0, 0, 0);
+            max-width: 450px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            h2{
+                margin: 0;
+            }
+            p{
+                // text-shadow: none;
+                font-size: 1.1em;
+            }
+            &:hover{
+            background-color: rgba(0, 0, 0, 0.8);
+
+            }
+        }
+        .lahori,.abad{
+            text-align: right;
+            display: none;
+            color: #fff;
+            text-shadow: 1px 1px 10px rgb(0, 0, 0);
+        }
+    }
+}
+
+@keyframes border {
+    0% {
+        transform: scale(0);
+    }
+}
+@keyframes scaling {
+    0% {
+        transform: scale(0.9);
+        box-shadow: none;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3), -10px 0 8px rgba(0, 0, 0, 0.3), 0 -10px 8px rgba(0, 0, 0, 0.3), 10px 0 8px rgba(0, 0, 0, 0.3);
+    }
+}
